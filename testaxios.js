@@ -1,0 +1,17 @@
+const axios = require('axios');
+
+const woeid = 26062; // Specify the WOEID
+const apiUrl = `https://api.x.com/2/trends/by/woeid/${woeid}`;
+const token = 'AAAAA'; // Replace with your actual Bearer token
+
+axios.get(apiUrl, {
+    headers: {
+        'Authorization': `Bearer ${token}`
+    }
+})
+.then(response => {
+    console.log('Trends Data:', response.data);
+})
+.catch(error => {
+    console.error('Error fetching trends:', error.response ? error.response.data : error.message);
+});
