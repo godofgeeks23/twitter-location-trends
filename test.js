@@ -7,7 +7,7 @@ const jsTweets = await client.v2.search("JavaScript", {
   "media.fields": "url",
 });
 
-// Consume every possible tweet of jsTweets (until rate limit is hit)
+// caution - this will consume every possible tweet of jsTweets (until rate limit is hit)
 for await (const tweet of jsTweets) {
   console.log(tweet);
 }
