@@ -1,7 +1,7 @@
-const { TwitterApi } = require('twitter-api-v2');
+const { TwitterApi } = require("twitter-api-v2");
 
 // Initialize Twitter client with your credentials
-const client = new TwitterApi('your bearer token here'); // Use your Bearer Token
+const client = new TwitterApi("your bearer token here"); // Use your Bearer Token
 
 // Main function
 async function main() {
@@ -28,12 +28,13 @@ async function main() {
     const { lat, lon } = geoData[0];
 
     // Search for popular tweets in the area
-    const tweets = await client.v2.search('trends', {
-      'geo.place.fields': 'contained_within,country,country_code,full_name,geo,id,name,place_type',
-      expansions: 'geo.place_id',
-      'user.fields': 'username',
+    const tweets = await client.v2.search("trends", {
+      "geo.place.fields":
+        "contained_within,country,country_code,full_name,geo,id,name,place_type",
+      expansions: "geo.place_id",
+      "user.fields": "username",
       max_results: 20,
-      sort_order: 'relevancy',
+      sort_order: "relevancy",
     });
 
     console.log(`Trending tweets in ${locationName}:\n`);
