@@ -1,5 +1,5 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
+const axios = require("axios");
+const cheerio = require("cheerio");
 
 async function scrapeTrends(url) {
   try {
@@ -13,20 +13,20 @@ async function scrapeTrends(url) {
     let trendsByTitle = [];
 
     // Iterate over each list-container within the timeline-container
-    $('#timeline-container .list-container').each((i, listContainer) => {
+    $("#timeline-container .list-container").each((i, listContainer) => {
       // Extract the title (time ago information) from h3.title
-      let title = $(listContainer).find('h3.title').text().trim();
+      let title = $(listContainer).find("h3.title").text().trim();
 
       // Initialize an array to hold the trends for this list-container
       let trends = [];
 
       // Within each list-container, find the trend-card__list and its list items
       $(listContainer)
-        .find('ol.trend-card__list li')
+        .find("ol.trend-card__list li")
         .each((j, li) => {
           // Extract the trend name and tweet count
-          let trendName = $(li).find('span.trend-name').text().trim();
-          let tweetCount = $(li).find('span.tweet-count').text().trim();
+          let trendName = $(li).find("span.trend-name").text().trim();
+          let tweetCount = $(li).find("span.tweet-count").text().trim();
 
           // Add the extracted data to the trends array
           trends.push({ trendName, tweetCount });
@@ -39,9 +39,9 @@ async function scrapeTrends(url) {
     // Output the trendsByTitle array in JSON format
     console.log(JSON.stringify(trendsByTitle, null, 2));
   } catch (error) {
-    console.error('Error fetching or parsing data:', error);
+    console.error("Error fetching or parsing data:", error);
   }
 }
 
 // Replace 'http://example.com' with the actual URL of the HTML page
-scrapeTrends('https://trends24.in/india/');
+scrapeTrends("https://trends24.in/india/");
