@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const woeid = 26062; // Specify the WOEID
 const apiUrl = `https://api.x.com/2/trends/by/woeid/${woeid}`;
-const token = "AAAAA"; // Replace with your actual Bearer token
+const token = "AAAAA"; // Replace with your actual Bearer token from Twitter developer account
 
 axios
   .get(apiUrl, {
