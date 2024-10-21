@@ -43,5 +43,4 @@ async function scrapeTrends(url) {
   }
 }
 
-// Replace 'http://example.com' with the actual URL of the HTML page
 scrapeTrends("https://trends24.in/india/");
