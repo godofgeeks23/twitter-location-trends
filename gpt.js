@@ -33,7 +33,7 @@ async function main() {
         "contained_within,country,country_code,full_name,geo,id,name,place_type",
       expansions: "geo.place_id",
       "user.fields": "username",
-      max_results: 20,
+      max_results: 5,
       sort_order: "relevancy",
     });
 
