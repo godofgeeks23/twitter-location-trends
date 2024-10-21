@@ -53,4 +53,5 @@ async function scrapeTrends(url) {
   }
 }
 
+// example - scrape trends for Srinagar
 scrapeTrends("https://trends24.in/india/srinagar/");
