@@ -77,5 +77,5 @@ const supported_cities = [
   "thane",
 ];
 
-// example - scrape trends for Srinagar
-scrapeTrends("https://trends24.in/india/srinagar/");
+// example - scrape trends for lucknow
+scrapeTrends("https://trends24.in/india/lucknow/");
