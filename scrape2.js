@@ -53,7 +53,29 @@ async function scrapeTrends(url) {
   }
 }
 
-const supported_cities = ["ahmedabad","amritsar","bangalore","bhopal","chennai","delhi","hyderabad","indore","jaipur","kanpur","kolkata","lucknow","mumbai","nagpur","patna","pune","rajkot","ranchi","srinagar","surat","thane"]
+const supported_cities = [
+  "ahmedabad",
+  "amritsar",
+  "bangalore",
+  "bhopal",
+  "chennai",
+  "delhi",
+  "hyderabad",
+  "indore",
+  "jaipur",
+  "kanpur",
+  "kolkata",
+  "lucknow",
+  "mumbai",
+  "nagpur",
+  "patna",
+  "pune",
+  "rajkot",
+  "ranchi",
+  "srinagar",
+  "surat",
+  "thane",
+];
 
 // example - scrape trends for Srinagar
 scrapeTrends("https://trends24.in/india/srinagar/");
