@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const woeid = 26062; // WOEID - where on earth ID for the location you want to fetch trends for
-const apiUrl = `https://api.x.com/2/trends/by/woeid/${woeid}`;
+const apiUrl = `https://api.x.com/2/trends/by/woeid/${woeid}`; // v2 API endpoint
 const token = "AAAAA"; // Replace with your actual Bearer token from Twitter developer account
 
 axios
